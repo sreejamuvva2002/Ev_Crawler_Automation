@@ -1,0 +1,202 @@
+q_id,question,no_rag_answer,local_rag_answer,hybrid_rag_answer,local_retrieval_count,web_retrieval_count,abstained_no_rag,abstained_local_rag,abstained_hybrid_rag,citation_count_local_rag,citation_count_hybrid_rag,citation_retrieval_match_local_rag,citation_retrieval_match_hybrid_rag
+1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,"I don't know the specific Tier 1 and Tier 2 suppliers for EV battery packs operating exclusively in Georgia and Alabama based on my current knowledge. However, I can provide a general approach to identifying such companies:
+
+- Research major automotive manufacturers with plants in Georgia and Alabama.
+- Identify their primary battery pack suppliers (Tier 1).
+- Look into the supply chains of these Tier 1 suppliers for Tier 2 components and materials.","- Mobis Alabama LLC is a Tier 1 supplier located in Gainesville, Hall County, Georgia.
+- Lear Corporation is a Tier 1 supplier located in Cartersville, Bartow County, Georgia.
+- DAEHAN Solution Georgia LLC is a Tier 2/3 supplier located in Covington, Newton County, Georgia.
+
+Evidence: [DOC:50ffb090-c2d9-5b12-9a5e-91b3f5e41a41], [DOC:ee236718-e09b-5e0c-95e5-a85abf6bd265], [DOC:edf8b5df-a1a0-59c0-ac02-dcf6def6d8e6]","- Mobis Alabama LLC operates a manufacturing plant in Gainesville, Hall County, Alabama, providing products and systems for ATVs and other off-road vehicles.
+- Lear Corporation has a manufacturing plant in Cartersville, Bartow County, Georgia, producing pressed parts in the body-in-white segment and structural components.
+
+Evidence:
+[DOC:50ffb090-c2d9-5b12-9a5e-91b3f5e41a41]
+[DOC:ee236718-e09b-5e0c-95e5-a85abf6bd265]",5,3,True,False,False,3,2,1.0,1.0
+10,What EV supply chain segments are growing fastest in the Southeast?,"I don't know. The specific growth rates of electric vehicle (EV) supply chain segments in the Southeast can vary based on recent investments, government policies, and market demands which I do not have current data for. To provide accurate information would require up-to-date industry reports or analysis focusing specifically on that region.","- Not found in provided context.
+Evidence: [DOC:ee236718-e09b-5e0c-95e5-a85abf6bd265], [DOC:cca20ef5-c412-5765-ab55-678c3c2eff0d], [DOC:ed045174-b16e-531c-9f8a-dd4673bf4c5a], [DOC:d1fb514c-16c0-525b-8b92-23a05ccd5876], [DOC:3712dc9a-b624-568e-a358-1d9b1930442e]","- Not found in provided context.
+Evidence: LOCAL_CONTEXT [DOC:a5b5dccd-eb82-5e81-80ff-a8693d35e9a0], [DOC:cca20ef5-c412-5765-ab55-678c3c2eff0d], [DOC:ed045174-b16e-531c-9f8a-dd4673bf4c5a], [DOC:d1fb514c-16c0-525b-8b92-23a05ccd5876], [DOC:3712dc9a-b624-568e-a358-1d9b1930442e]; WEB_CONTEXT [WEB:f36aa059c5dc8f9b72ed3ac78c1912a85f6ca27d], [WEB:aaf469c88b819f957f7f8cda02510cb140ad668c]",5,3,True,True,True,5,7,1.0,1.0
+11,Which companies are shifting from ICE components to EV-focused products?,"I don't know which specific companies are currently making a definitive shift from internal combustion engine (ICE) components to electric vehicle (EV)-focused products. However, here are some general trends and examples:
+
+- Many automotive suppliers are diversifying their product lines to include more EV-related parts.
+- Companies like Bosch and Continental have been investing in electrification technologies.
+- Some companies might be reducing ICE component production while increasing EV part manufacturing.
+- There could be a trend among smaller specialized firms focusing solely on EV components.","- Not found in provided context.
+Evidence: [DOC:dfae37d0-6d59-5792-83b2-5b99a5faae9a], [DOC:25a2e193-55c4-57ca-8bfe-83131dfdd094], [DOC:170ff4b7-e0cd-5067-b1d5-036dc402b291], [DOC:00f680a4-a7f1-5811-b8ba-3cf0351c5004], [DOC:28ff3037-bcca-58d7-aede-8699ba461ef5]","- Not found in provided context.
+
+Evidence:
+[DOC:10233065-573c-5189-a2ca-9ab081612194]
+[DOC:25a2e193-55c4-57ca-8bfe-83131dfdd094]
+[DOC:170ff4b7-e0cd-5067-b1d5-036dc402b291]
+[DOC:00f680a4-a7f1-5811-b8ba-3cf0351c5004]
+[DOC:28ff3037-bcca-58d7-aede-8699ba461ef5]
+[WEB:764c5c9d0564d4ab665c2aa47f43a5bc6f20001d]
+[WEB:51cead84cf3e3c6a39ef00c102c51f91e1601e64]",5,3,True,True,True,5,7,1.0,1.0
+12,How is demand for battery manufacturing equipment changing regionally?,"I don't know. The regional changes in demand for battery manufacturing equipment are influenced by various factors such as government policies, technological advancements, and market trends which I do not have current data on to provide specific insights. However, generally speaking:
+
+- Asia-Pacific regions like China and South Korea are seeing high growth due to strong government support and large-scale investments.
+- Europe is also experiencing increased demand driven by ambitious green energy targets and automotive electrification initiatives.
+- North America is witnessing steady growth but may lag behind Asia-Pacific in terms of scale and speed.","Not found in provided context.
+Evidence: [DOC:52e7a40c-5ca3-5bf3-874a-cec3e253a147], [DOC:4a76dc08-7f4b-5676-b5ee-b81fad4e9397], [DOC:06b4b9d4-8ed3-5aa9-ac83-9432bde46c5b], [DOC:22ddbcf4-c8b6-53f7-980b-9450a5c6bb17], [DOC:cca20ef5-c412-5765-ab55-678c3c2eff0d]","Not found in provided context.
+
+Evidence:
+- LOCAL_CONTEXT [DOC:52e7a40c-5ca3-5bf3-874a-cec3e253a147]
+- LOCAL_CONTEXT [DOC:4a76dc08-7f4b-5676-b5ee-b81fad4e9397]
+- LOCAL_CONTEXT [DOC:06b4b9d4-8ed3-5aa9-ac83-9432bde46c5b]
+- LOCAL_CONTEXT [DOC:cca20ef5-c412-5765-ab55-678c3c2eff0d]
+- LOCAL_CONTEXT [DOC:22ddbcf4-c8b6-53f7-980b-9450a5c6bb17]
+- WEB_CONTEXT [WEB:1c34768355c972b88bf46426323674bfa381532e]
+- WEB_CONTEXT [WEB:d64d90b84d4b109d1ef8b5ab48a8b12da5c0a16e]",5,3,True,True,True,5,7,1.0,1.0
+13,Which Southeast counties combine EV supplier density with available workforce capacity?,"I don't know. The question requires specific data on electric vehicle (EV) supplier density and workforce capacity in Southeast counties, which I do not have access to without external sources or databases.","Not found in provided context.
+
+Evidence:
+[DOC:structured-summary::4023cfcf2615]","Not found in provided context.
+Evidence: LOCAL_CONTEXT: [DOC:structured-summary::4023cfcf2615]",5,3,True,True,True,1,1,1.0,1.0
+14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,"I don't know. However, I can provide a general approach to identifying such regions:
+
+- Proximity to major automotive manufacturing hubs
+- Availability of skilled labor force in electronics and manufacturing sectors
+- Presence of established supply chains for raw materials like lithium, cobalt, nickel
+- Government incentives or policies supporting battery production and R&D
+- Access to renewable energy sources for sustainable operations","- Toccoa, Stephens County (F&P Georgia Manufacturing)
+- Bainbridge, Decatur County (Hollingsworth & Vose Co.)
+- McDonough, Henry County (Hyundai Motor Group)
+- Jefferson, Jackson County (IMMI)
+
+Evidence: [DOC:structured-row::GNEM updated excel.xlsx::Data::54], [DOC:structured-row::GNEM updated excel.xlsx::Data::78], [DOC:structured-row::GNEM updated excel.xlsx::Data::84], [DOC:structured-row::GNEM updated excel.xlsx::Data::87]","- Toccoa, Stephens County (F&P Georgia Manufacturing)
+- Bainbridge, Decatur County (Hollingsworth & Vose Co.)
+- McDonough, Henry County (Hyundai Motor Group)
+- Jefferson, Jackson County (IMMI)
+
+Evidence: [DOC:structured-row::GNEM updated excel.xlsx::Data::54], [DOC:structured-row::GNEM updated excel.xlsx::Data::78], [DOC:structured-row::GNEM updated excel.xlsx::Data::84], [DOC:structured-row::GNEM updated excel.xlsx::Data::87]",5,3,True,False,False,5,5,0.8,0.8
+15,Where are EV manufacturing clusters emerging outside of major metros?,"I don't know the specific locations of all emerging electric vehicle (EV) manufacturing clusters outside of major metropolitan areas with absolute certainty. However, based on general trends and reports, here are a few regions where such activity might be occurring:
+
+- Southeast Asia: Countries like Thailand and Indonesia have been developing their EV industries.
+- Eastern Europe: Some countries in this region are beginning to establish or expand EV production facilities.
+- Latin America: Certain nations in South America are showing interest in building up their EV manufacturing capabilities.","Not found in provided context.
+Evidence: [DOC:25a2e193-55c4-57ca-8bfe-83131dfdd094], [DOC:75d8de3c-b83e-5de1-8bd0-37ca8ec180df], [DOC:c18d26cc-74ba-547d-95fa-8731a86d7459], [DOC:31783303-bd5f-56d2-8a97-a04a6ed8fbe4], [DOC:e5449aa9-e8f3-5b5f-a7a5-367e9534a53d]","- Fort Valley is mentioned as a location where an Italian manufacturer, Imola, plans to open an EV manufacturing plant within the next two years.
+- The text indicates that battery manufacturers and other automotive suppliers are moving into various regions beyond just Metro Atlanta, including west central Georgia and Southeast Georgia.
+
+Evidence: WEB:4a2d67dd5f449f1747a11e6e9e9f33ee9ea173b1",5,3,True,True,False,5,1,1.0,1.0
+2,Map suppliers producing power electronics for BEVs in the Southeast.,"I don't know. The specific map of suppliers producing power electronics for Battery Electric Vehicles (BEVs) in the Southeast region is not within my current knowledge base. To provide accurate information, I would need to research and verify details about companies operating in that sector and location.","- GSC Steel Stamping LLC produces deep groove ball bearings and DC-to-DC converters relevant to BEV power electronics.
+- Yazaki North America provides automotive supplier division products including ADAS, powertrain, and electronics related to power electronics.
+- ZF Gainesville LLC offers automotive supplier footprint components such as electrification, thermal management, and powertrain parts for EVs.
+
+Evidence: [DOC:structured-row::GNEM updated excel.xlsx::Data::70], [DOC:structured-row::GNEM updated excel.xlsx::Data::203], [DOC:structured-row::GNEM updated excel.xlsx::Data::206]","- GSC Steel Stamping LLC produces deep groove ball bearings and DC-to-DC converters relevant to EV supply chain.
+- Yazaki North America provides automotive supplier division services including ADAS, powertrain, and electronics.
+- ZF Gainesville LLC offers automotive supplier footprint components such as electrification, thermal management, and powertrain.
+
+Evidence: [DOC:structured-row::GNEM updated excel.xlsx::Data::70], [DOC:structured-row::GNEM updated excel.xlsx::Data::203], [DOC:structured-row::GNEM updated excel.xlsx::Data::206]",5,3,True,False,False,4,4,0.75,0.75
+3,Which companies in the region manufacture battery modules versus complete packs?,I don't know. The question requires specific regional information about battery manufacturing companies which I do not have without accessing external data sources.,"- Not found in provided context.
+
+Evidence:
+[DOC:ee236718-e09b-5e0c-95e5-a85abf6bd265]
+[DOC:cca20ef5-c412-5765-ab55-678c3c2eff0d]
+[DOC:313256af-0095-5a58-bcfd-dc6ad249cbc1]
+[DOC:0f35bc9c-41ab-5c8c-9193-c09576b6f57c]
+[DOC:8dc89c0f-9fe5-59b5-985e-1dea24793e65]","- A123 Systems, Inc. manufactures battery cells and modules.
+- EnerDel, Inc. produces lithium-ion cells and packs for hybrid and electric vehicles.
+
+Evidence:
+WEB:6bd430777b692d0040f30771250d5323afeb17b4
+WEB:6f4c7576b516de96f661d5351c2951fe6659505e",5,3,True,True,False,5,2,1.0,0.5
+4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,"I don't know specific Southeast-based suppliers capable of producing high-voltage connectors at automotive scale from my current knowledge base. However, here are some general steps one might take to find such suppliers:
+
+- Research industry directories and databases focusing on Southeast Asian countries.
+- Attend trade shows and conferences related to the automotive industry in Southeast Asia.
+- Contact local business associations or chambers of commerce in relevant Southeast Asian cities.
+- Use online platforms like LinkedIn or specialized B2B networks to connect with manufacturers.
+- Look into government-sponsored export-import websites for Southeast Asian nations.","- Woory Industrial Co., located in Georgia, is a major supplier with the capability to produce high-voltage EV connectors and electronics.
+- The company employs 87,000 people and operates under the category of OEM Supply Chain, focusing on automotive connectors, terminals, sensors, and power/data components.
+
+Evidence: [DOC:b9b75722-04d8-5d3d-95b7-0d8d9d8794c3]","- Woory Industrial Co., located in Georgia, is a supplier capable of producing high-voltage EV connectors and electronics.
+- WIKA USA, also based in Georgia, provides HV and LV wiring harnesses for both EVs and ICE vehicles.
+
+Evidence:
+[DOC:b9b75722-04d8-5d3d-95b7-0d8d9d8794c3]
+[DOC:b65976aa-7e23-50de-a8e0-eab5d078144b]",5,3,True,False,False,1,2,1.0,1.0
+5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,"I don't know the specific current supplier list for DC fast charging hardware with existing OEM (Original Equipment Manufacturer) contracts. However, some well-known companies in this field include:
+
+- ABB
+- ChargePoint
+- EVBox
+- Triton (formerly SemaConnect)
+- Wallbox
+
+These companies are known to be involved in manufacturing and supplying DC fast charging solutions for electric vehicles. For the most accurate and up-to-date information regarding OEM contracts, it would be best to consult their official websites or contact them directly.","- Not found in provided context.
+
+Evidence:
+[DOC:structured-summary::c80b138963c4]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::96]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::117]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::173]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::174]","Not found in provided context.
+
+Evidence:
+- [DOC:structured-summary::c80b138963c4]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::96]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::117]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::173]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::174]
+- [WEB:e671e2ba88a47cefa9dadce42794596ad2c9fe39]
+- [WEB:45528abf3cbed4ed1632a579f85ffd525a6f7238]",5,3,True,True,True,6,8,0.8333333333333334,0.875
+6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,"I don't know. The specific list of Tier 2 suppliers for autonomous vehicle sensor systems can change frequently and requires up-to-date industry information to provide accurately. However, generally speaking, some companies that might fit this category include:
+
+- I don't have precise current data but historically companies like Aptiv (formerly Delphi) could be considered.
+- Other potential players might include companies specializing in electronics manufacturing services (EMS).
+- Tier 2 suppliers often deal with components rather than complete systems, so they would supply parts to the main sensor manufacturers.","- Not found in provided context.
+Evidence: [DOC:09c6ccae-f41d-5e93-b03c-3142f7017df0], [DOC:da0f4961-1ff2-513f-b847-6080eb85604a], [DOC:6b2e419d-6bde-5634-a18d-36e18a306c52], [DOC:eac6ada9-9412-5c30-b2d0-d4f723e7457d], [DOC:582b24ef-b262-5250-8ca1-68e862f46e0d]","Not found in provided context.
+
+Evidence:
+- DOC:09c6ccae-f41d-5e93-b03c-3142f7017df0
+- DOC:da0f4961-1ff2-513f-b847-6080eb85604a
+- DOC:de262649-2c2f-51e9-a464-17be9273af17
+- DOC:dca72302-0eb9-55a3-87fd-24cf15d88b0
+- DOC:582b24ef-b262-5250-8ca1-68e862f46e0d
+- WEB:403eec33523d27f80809add9277fb7a17b42e504",5,3,True,True,True,5,6,1.0,0.8333333333333334
+7,Which EV components show the highest supplier concentration risk in the Southeast?,"I don't know. The question requires specific data on electric vehicle (EV) supply chains and supplier concentrations in the Southeast region, which isn't available from my general knowledge alone. However, typically high-risk components might include:
+
+- Batteries/cells: Due to limited production facilities.
+- Rare earth metals: Essential for magnets and other EV parts with few suppliers globally.
+- Semiconductors: Critical for vehicle electronics but often subject to global shortages.
+- Lithium-ion materials: Key ingredients in batteries that are sourced from a small number of countries.","Not found in provided context.
+
+Evidence:
+[DOC:structured-summary::1b9682990e99]","Not found in provided context.
+
+Evidence: [DOC:structured-summary::1b9682990e99]",5,3,True,True,True,1,1,1.0,1.0
+8,Identify supply chain dependencies on international battery material imports.,"- Dependency on cobalt from Congo for lithium-ion batteries
+- Reliance on lithium from Australia and Chile for battery production
+- Nickel sourcing from Indonesia and Philippines crucial for battery efficiency
+- Manganese imports from South Africa and China impact battery cost and performance
+- Graphite supply from China dominates the market, affecting availability and pricing
+- Rare earth elements from China are vital for magnet production in electric vehicles
+- Trade policies and geopolitical tensions can disrupt material flows globally","- Not found in provided context.
+Evidence: [DOC:38dc319c-d41b-5f0c-a750-af0aab3d5b97], [DOC:22a2027a-7f7b-5b5d-8427-ef80cd0951b7], [DOC:637873be-0419-507d-893f-fef46bd55fa8], [DOC:60ca113f-2caf-56b7-b08e-bf82087eca41], [DOC:094b990e-9cbe-5012-a9b8-2a448b70daa4]","- U.S. reliance on Chinese graphite and other battery materials presents challenges for compliance with the Inflation Reduction Act (IRA).
+- China has announced export controls on battery graphite, limiting exports to both Japan and the United States.
+- The reduction in graphite exports from China highlights the urgent need for diversification of supply sources.
+- As a top producer of graphite, China's curbs on exports escalate tensions between China and the U.S.
+
+Evidence: WEB:597e82f8bd168450342ff8133df33a251fc6bada, WEB:5eeec5ddf614850158bbb9f6942d13bd993f3006",5,3,False,True,False,5,2,1.0,1.0
+9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,"I don't know. However, based on general manufacturing and supply chain knowledge:
+
+- **Supply Chain Disruptions:** Issues in the procurement of components from secondary suppliers can lead to delays in OEM (Original Equipment Manufacturer) production lines.
+- **Component Shortages:** If a Tier 2 or Tier 3 supplier faces difficulties producing critical parts, it could cause shortages that ripple up to the OEMs.
+- **Quality Control Problems:** Lower-tier suppliers might experience quality control issues affecting the reliability of components supplied to OEMs.
+- **Logistical Challenges:** Transportation and warehousing problems at lower tiers can disrupt the timely delivery of materials needed by OEMs.","Not found in provided context.
+
+Evidence:
+- [DOC:structured-summary::8d3c558afcb9]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::96]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::117]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::173]
+- [DOC:structured-row::GNEM updated excel.xlsx::Data::174]","Not found in provided context.
+
+Evidence:
+- LOCAL_CONTEXT [DOC:structured-summary::8d3c558afcb9]
+- LOCAL_CONTEXT [DOC:structured-row::GNEM updated excel.xlsx::Data::96]
+- LOCAL_CONTEXT [DOC:structured-row::GNEM updated excel.xlsx::Data::117]
+- LOCAL_CONTEXT [DOC:structured-row::GNEM updated excel.xlsx::Data::173]
+- LOCAL_CONTEXT [DOC:structured-row::GNEM updated excel.xlsx::Data::174]
+- WEB_CONTEXT [WEB:6073782de3a957d5f98d153a403fd92836cefaba]
+- WEB_CONTEXT [WEB:5ec248e612a988be86ea696a631c0571c9c6a408]",5,3,True,True,True,6,8,0.8333333333333334,0.875

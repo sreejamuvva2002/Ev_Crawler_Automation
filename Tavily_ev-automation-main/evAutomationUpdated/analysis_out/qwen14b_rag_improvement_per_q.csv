@@ -1,0 +1,61 @@
+label,q_id,question,abstained,citation_match_ratio,unsupported_claim_ratio
+local_before,1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,False,1.0,0.33
+local_before,2,Map suppliers producing power electronics for BEVs in the Southeast.,False,1.0,0.0
+local_before,3,Which companies in the region manufacture battery modules versus complete packs?,True,1.0,1.0
+local_before,4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,False,1.0,0.0
+local_before,5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,True,1.0,0.0
+local_before,6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,True,1.0,1.0
+local_before,7,Which EV components show the highest supplier concentration risk in the Southeast?,True,1.0,0.0
+local_before,8,Identify supply chain dependencies on international battery material imports.,True,1.0,1.0
+local_before,9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,True,1.0,0.0
+local_before,10,What EV supply chain segments are growing fastest in the Southeast?,True,1.0,0.0
+local_before,11,Which companies are shifting from ICE components to EV-focused products?,True,1.0,0.0
+local_before,12,How is demand for battery manufacturing equipment changing regionally?,True,1.0,0.0
+local_before,13,Which Southeast counties combine EV supplier density with available workforce capacity?,True,1.0,
+local_before,14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,False,1.0,0.0
+local_before,15,Where are EV manufacturing clusters emerging outside of major metros?,True,1.0,0.0
+local_after,1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,False,1.0,0.2
+local_after,2,Map suppliers producing power electronics for BEVs in the Southeast.,False,1.0,0.0
+local_after,3,Which companies in the region manufacture battery modules versus complete packs?,False,1.0,0.0
+local_after,4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,False,1.0,0.0
+local_after,5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,False,1.0,0.2
+local_after,6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,False,1.0,1.0
+local_after,7,Which EV components show the highest supplier concentration risk in the Southeast?,True,1.0,0.0
+local_after,8,Identify supply chain dependencies on international battery material imports.,True,1.0,0.0
+local_after,9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,True,1.0,0.0
+local_after,10,What EV supply chain segments are growing fastest in the Southeast?,True,1.0,0.0
+local_after,11,Which companies are shifting from ICE components to EV-focused products?,True,1.0,0.0
+local_after,12,How is demand for battery manufacturing equipment changing regionally?,True,1.0,0.0
+local_after,13,Which Southeast counties combine EV supplier density with available workforce capacity?,False,1.0,0.18
+local_after,14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,False,1.0,0.0
+local_after,15,Where are EV manufacturing clusters emerging outside of major metros?,True,1.0,0.0
+hybrid_before,1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,False,1.0,0.5
+hybrid_before,2,Map suppliers producing power electronics for BEVs in the Southeast.,False,1.0,0.0
+hybrid_before,3,Which companies in the region manufacture battery modules versus complete packs?,False,,0.0
+hybrid_before,4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,False,1.0,0.0
+hybrid_before,5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,True,1.0,0.0
+hybrid_before,6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,True,,0.0
+hybrid_before,7,Which EV components show the highest supplier concentration risk in the Southeast?,True,1.0,0.0
+hybrid_before,8,Identify supply chain dependencies on international battery material imports.,False,1.0,0.0
+hybrid_before,9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,True,1.0,0.0
+hybrid_before,10,What EV supply chain segments are growing fastest in the Southeast?,True,1.0,0.0
+hybrid_before,11,Which companies are shifting from ICE components to EV-focused products?,True,1.0,0.0
+hybrid_before,12,How is demand for battery manufacturing equipment changing regionally?,True,1.0,0.0
+hybrid_before,13,Which Southeast counties combine EV supplier density with available workforce capacity?,True,1.0,1.0
+hybrid_before,14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,False,1.0,0.0
+hybrid_before,15,Where are EV manufacturing clusters emerging outside of major metros?,False,1.0,0.12
+hybrid_after,1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,False,1.0,0.2
+hybrid_after,2,Map suppliers producing power electronics for BEVs in the Southeast.,False,1.0,0.0
+hybrid_after,3,Which companies in the region manufacture battery modules versus complete packs?,False,1.0,0.0
+hybrid_after,4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,False,1.0,0.0
+hybrid_after,5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,False,1.0,0.2
+hybrid_after,6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,False,1.0,0.2
+hybrid_after,7,Which EV components show the highest supplier concentration risk in the Southeast?,True,1.0,1.0
+hybrid_after,8,Identify supply chain dependencies on international battery material imports.,False,1.0,0.0
+hybrid_after,9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,True,1.0,0.0
+hybrid_after,10,What EV supply chain segments are growing fastest in the Southeast?,True,1.0,0.0
+hybrid_after,11,Which companies are shifting from ICE components to EV-focused products?,True,1.0,0.0
+hybrid_after,12,How is demand for battery manufacturing equipment changing regionally?,True,1.0,0.0
+hybrid_after,13,Which Southeast counties combine EV supplier density with available workforce capacity?,False,1.0,0.2
+hybrid_after,14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,False,1.0,0.0
+hybrid_after,15,Where are EV manufacturing clusters emerging outside of major metros?,True,1.0,0.0

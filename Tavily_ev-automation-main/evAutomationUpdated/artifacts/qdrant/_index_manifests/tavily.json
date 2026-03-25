@@ -1,0 +1,8 @@
+{
+  "chunk_count": 1796,
+  "collection_name": "tavily",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "fingerprint": "79894f4fd274",
+  "manifest_version": 2,
+  "point_id_strategy": "uuid5"
+}

@@ -1,0 +1,8 @@
+{
+  "chunk_count": 1250,
+  "collection_name": "local_probe",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "fingerprint": "e0b3f341fda1",
+  "manifest_version": 2,
+  "point_id_strategy": "uuid5"
+}

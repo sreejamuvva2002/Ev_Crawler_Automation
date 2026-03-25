@@ -1,0 +1,340 @@
+q_id,question,no_rag_answer,local_rag_answer,hybrid_rag_answer,local_retrieval_count,web_retrieval_count,abstained_no_rag,abstained_local_rag,abstained_hybrid_rag,citation_count_local_rag,citation_count_hybrid_rag,citation_retrieval_match_local_rag,citation_retrieval_match_hybrid_rag
+1,Show Tier 1 and Tier 2 suppliers for EV battery packs operating in Georgia and Alabama.,"- **Tier 1 Suppliers**: These are companies that directly supply components to the manufacturers of electric vehicle (EV) battery packs. Examples include:
+  - **Samsung SDI** (illustrative example, not GA/AL-specific): Known for supplying lithium-ion batteries.
+  - **LG Energy Solution** (illustrative example, not GA/AL-specific): A major supplier of EV battery cells.
+
+- **Tier 2 Suppliers**: These companies supply materials and components to the Tier 1 suppliers. Examples include:
+  - **Umicore** (illustrative example, not GA/AL-specific): Specializes in cathode active materials for lithium-ion batteries.
+  - **Solvay** (illustrative example, not GA/AL-specific): Provides electrolytes and other battery components.
+
+- **Tier 1/Tier 2 Supplier Types**: 
+  - Tier 1: Battery cell manufacturers, assembly companies.
+  - Tier 2: Material suppliers, component manufacturers.
+
+- **Illustrative Examples of Potential Suppliers in Georgia and Alabama**:
+  - **Georgia-based Company X** (hypothetical): A local supplier focusing on battery materials.
+  - **Alabama-based Company Y** (hypothetical): Specializes in battery assembly components.","- **Tier 1 Suppliers**: 
+  - Fouts Brothers Fire Equipment (Statesboro, Bulloch County) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - Master Craft Engineering Inc. (Savannah, Chatham County) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+
+- **Tier 2/3 Suppliers**:
+  - F&P Georgia Manufacturing (Toccoa, Stephens County) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - Hollingsworth & Vose Co. (Bainbridge, Decatur County) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+
+**Missing info:** 
+- Tier 1 and Tier 2 suppliers operating in Alabama for EV battery packs.
+
+Evidence:
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]","- **Tier 1 Suppliers**: 
+  - Kyungshin America Corp., located in Troup County, GA (Category = Tier 1) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - Master Craft Engineering Inc., located in Savannah, Chatham County, GA (Category = Tier 1) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - Solvay Specialty Polymers USA LLC, located in Springfield, Effingham County, GA (Category = Tier 1) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+
+- **Tier 1/2 Suppliers**:
+  - F&P Georgia Manufacturing, located in Toccoa, Stephens County, GA (Category = Tier 1/2) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - Hollingsworth & Vose Co., located in Bainbridge, Decatur County, GA (Category = Tier 1/2) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+  - IMMI, located in Jefferson, Jackson County, GA (Category = Tier 1/2) [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+
+**Missing info:** 
+- No information provided for suppliers operating specifically in Alabama.
+
+Evidence:
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]",5,3,False,False,False,1,1,1.0,1.0
+10,What EV supply chain segments are growing fastest in the Southeast?,"- Battery manufacturing and recycling facilities are expanding rapidly due to increased demand for electric vehicles (EVs).
+- Charging infrastructure installation companies are seeing significant growth as more public charging stations are required to support EV adoption.
+- Lithium-ion battery component suppliers are experiencing strong growth, driven by the need for advanced materials in EV batteries.
+- Electric vehicle assembly plants are being established or expanded by major automakers looking to capitalize on regional incentives and supply chain proximity.
+- Tier 1 illustrative examples: Battery manufacturing (e.g., LG Energy Solution), Charging infrastructure providers (e.g., ChargePoint).
+- Tier 2 illustrative examples: Component suppliers for battery materials, Local charging station installation companies.","Not found in provided context.
+
+Evidence:
+[DOC:c26089b4-fed3-591d-9c8c-84a52003385f]
+[DOC:ea5b4439-6970-5999-a95d-38114a679328]","Not found in provided context.
+
+Evidence:
+[DOC:c26089b4-fed3-591d-9c8c-84a52003385f]
+[WEB:f36aa059c5dc8f9b72ed3ac78c1912a85f6ca27d]
+[WEB:aaf469c88b819f7f7f8cda02510cb140ad668c]",5,5,False,True,True,2,3,1.0,0.6666666666666666
+11,Which companies are shifting from ICE components to EV-focused products?,"- Automotive giants like General Motors and Volkswagen are transitioning their product lines towards electric vehicles (EVs), phasing out internal combustion engine (ICE) components.
+- Suppliers such as Bosch and Continental are adapting by developing new technologies for EVs, including battery management systems and electric drivetrains.
+- Startups focused on EV technology, such as Rivian and Lucid Motors, are gaining traction and influencing established companies to shift their focus towards EV products.
+- Traditional ICE component manufacturers like Delphi Technologies are rebranding and restructuring to emphasize their role in the EV supply chain.
+- Companies like Panasonic, which have a strong presence in battery manufacturing for consumer electronics, are expanding into automotive batteries for EVs.","Not found in provided context.
+
+Missing info:
+- Specific company names and their product shifts from ICE to EV.
+- Details on any company transitions or changes in focus towards EV products.
+
+Evidence:
+[DOC:ea5b4439-6970-5999-a95d-38114a679328]
+[DOC:a55e82db-3d32-5f38-9628-dd9b5e7a5c93]","Not found in provided context.
+
+Evidence:
+[DOC:ea5b4439-6970-5999-a95d-38114a679328]
+[WEB:764c5c9d0564d4ab665c2aa47f43a5bc6f20001d]
+[WEB:b730214e1c7cb995f03d0a2f00c1278ef5ac9eeb]",5,5,False,True,True,2,3,1.0,1.0
+12,How is demand for battery manufacturing equipment changing regionally?,"- Demand for battery manufacturing equipment is increasing in regions with significant investments in electric vehicle (EV) and renewable energy sectors, such as Asia-Pacific, Europe, and North America.
+- China has seen a surge in demand due to government incentives supporting EV production and storage solutions.
+- The European Union is focusing on localizing battery production to reduce reliance on imports and meet ambitious climate goals.
+- In the United States, states like California and Michigan are experiencing high demand as automakers expand their EV manufacturing capabilities.
+- South Korea and Japan are also seeing increased demand due to established electronics and automotive industries investing in advanced battery technologies.
+- Illustrative examples of regions with growing demand include:
+  - Tier 1: Asia-Pacific (China, South Korea)
+  - Tier 2: Europe (Germany, Poland), North America (California, Michigan)","Not found in provided context.
+
+Missing info:
+- Specific regional changes or trends related to the demand for battery manufacturing equipment.
+
+Evidence:
+[DOC:a55e82db-3d32-5f38-9628-dd9b5e7a5c93]
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]","Not found in provided context.
+
+Missing info:
+- Specific regional changes in demand for battery manufacturing equipment.
+- Details on how different regions are experiencing growth or decline in the sector.
+
+Evidence:
+[DOC:a55e82db-3d32-5f38-9628-dd9b5e7a5c93]
+[WEB:1c34768355c972b88bf46426323674bfa381532e]
+[WEB:d64d90b84d4b109d1ef8b5ab48a8b12da5c0a16e]",5,5,False,True,True,2,3,1.0,1.0
+13,Which Southeast counties combine EV supplier density with available workforce capacity?,"- Counties in the Southeastern United States that are likely to have high electric vehicle (EV) supplier density and a robust workforce include those near major automotive manufacturing hubs.
+- Illustrative examples of such counties might be:
+  - Shelby County, Alabama: Home to Ford Motor Company’s River Rouge Complex, which has shown interest in EV production.
+  - Greenville County, South Carolina: Known for its strong automotive industry presence, including BMW's plant and numerous suppliers.
+- These areas typically have established infrastructure and a skilled workforce trained in manufacturing processes relevant to EV production.
+- Counties with universities or technical colleges that offer specialized training programs related to automotive engineering and technology are also likely candidates.
+- Tier 1 counties would be those directly adjacent to major automotive plants, while Tier 2 might include nearby counties with significant supplier networks but slightly less direct plant proximity.","- Hall County has a high company count (9) and employment total (2470), with one direct EV/Battery company. [DOC:01283012-69e1-5b27-8830-86e46d2f7525]
+- Newton County has a moderate company count (6) and employment total (2020), with one direct EV/Battery company. [DOC:01283012-69e1-5b27-8830-86e46d2f7525]
+- Coweta County has a moderate company count (5) and employment total (3038), with one direct EV/Battery company. [DOC:01283012-69e1-5b27-8830-86e46d2f7525]
+
+Missing info:
+- Specific details on workforce capacity and supplier density for other counties.
+- Information about the exact number of EV suppliers in each county.
+
+Evidence: [DOC:01283012-69e1-5b27-8830-86e46d2f7525]","- Hall County has 9 companies and an employment total of 2470, including one direct EV company and four indirect EV-related companies [DOC:01283012-69e1-5b27-8830-86e46d2f7525].
+- Troup County has 15 companies with an employment total of 7938, and three indirect EV-related companies [DOC:01283012-69e1-5b27-8830-86e46d2f7525].
+- Newton County has 6 companies and an employment total of 2020, with one direct EV company and three indirect EV-related companies [DOC:01283012-69e1-5b27-8830-86e46d2f7525].
+
+Missing info:
+- Specific workforce capacity details for each county.
+- Exact number of EV suppliers in other counties.
+
+Evidence: [DOC:01283012-69e1-5b27-8830-86e46d2f7525]",5,5,False,False,False,1,1,1.0,1.0
+14,Identify regions suitable for battery pack assembly based on existing infrastructure and suppliers.,"- **Tier 1 Regions:** Areas with established automotive manufacturing hubs, robust supply chains, and favorable government policies supporting electric vehicle (EV) production.
+- **Tier 2 Regions:** Locations that are emerging in the EV sector but may lack some of the mature infrastructure found in Tier 1 regions.
+
+**Illustrative Examples:**
+- **Southeastern United States:** Tennessee, with its strong automotive industry presence around Nashville and Memphis, and Alabama, home to major automotive manufacturing facilities.
+- **East Asia:** South Korea’s Ulsan region, known for its concentration of automotive manufacturers and suppliers.","- F&P Georgia Manufacturing in Toccoa, Stephens County is a lithium-ion battery recycler and raw materials provider with 104 employees. [DOC:structured-row::GNEM updated excel.xlsx::Data::54]
+- Hollingsworth & Vose Co. in Bainbridge, Decatur County provides lithium-ion battery materials and has 400 employees. [DOC:structured-row::GNEM updated excel.xlsx::Data::78]
+- Hyundai Motor Group in McDonough, Henry County manufactures battery parts for electric vehicles with 164 employees. [DOC:structured-row::GNEM updated excel.xlsx::Data::84]
+- IMMI in Jefferson, Jackson County produces battery electrolyte and has 100 employees. [DOC:structured-row::GNEM updated excel.xlsx::Data::87]
+
+Missing info:
+- Specific details about the existing infrastructure beyond company facilities.
+- Information on other regions or states outside Georgia that might be suitable.
+
+Evidence: [DOC:structured-row::GNEM updated excel.xlsx::Data::54], [DOC:structured-row::GNEM updated excel.xlsx::Data::78], [DOC:structured-row::GNEM updated excel.xlsx::Data::84], [DOC:structured-row::GNEM updated excel.xlsx::Data::87]","- Toccoa, Stephens County (Georgia) is home to F&P Georgia Manufacturing which recycles lithium-ion batteries and provides raw materials for Hyundai Kia's EV supply chain.[DOC:structured-row::GNEM updated excel.xlsx::Data::54]
+- Bainbridge, Decatur County (Georgia) hosts Hollingsworth & Vose Co., a supplier of lithium-ion battery materials to the same OEMs.[DOC:structured-row::GNEM updated excel.xlsx::Data::78]
+- McDonough, Henry County (Georgia) is where Hyundai Motor Group operates a manufacturing plant for EV battery parts.[DOC:structured-row::GNEM updated excel.xlsx::Data::84]
+- Jefferson, Jackson County (Georgia) has IMMI, which produces battery electrolyte for the same supply chain participants.[DOC:structured-row::GNEM updated excel.xlsx::Data::87]
+
+Missing info:
+- Specific regions outside Georgia that have suitable infrastructure and suppliers.
+- Details on standardization efforts in battery removal processes.
+
+Evidence: [DOC:structured-summary::7e5a573a800a], [DOC:structured-row::GNEM updated excel.xlsx::Data::54], [DOC:structured-row::GNEM updated excel.xlsx::Data::78], [DOC:structured-row::GNEM updated excel.xlsx::Data::84], [DOC:structured-row::GNEM updated excel.xlsx::Data::87]",5,3,False,False,False,5,6,0.8,0.8333333333333334
+15,Where are EV manufacturing clusters emerging outside of major metros?,"- Emerging electric vehicle (EV) manufacturing clusters can be found in smaller cities and rural areas that offer lower operational costs, abundant land for factory sites, and supportive local policies. 
+- For example, the U.S. state of Michigan has seen growth in EV manufacturing beyond Detroit, with companies establishing plants in cities like Holland.
+- Another illustrative example is the city of Sunderland in the UK, where Nissan established an EV production facility outside London and other major metropolitan areas.
+- Tier 1 locations would be smaller industrial or suburban towns near existing automotive supply chains but with lower real estate costs. 
+- Tier 2 locations might include rural regions that offer tax incentives for green manufacturing initiatives.
+- These clusters often benefit from government grants, research partnerships with local universities, and a skilled workforce trained in traditional automotive industries.","Not found in provided context.
+
+Evidence:
+[DOC:c26089b4-fed3-591d-9c8c-84a52003385f]
+[DOC:25a2e193-55c4-57ca-8bfe-83131dfdd094]","Not found in provided context. 
+
+Evidence: [DOC:c26089b4-fed3-591d-9c8c-84a52003385f], [DOC:25a2e193-55c4-57ca-8bfe-83131dfdd094]",7,4,False,True,True,2,2,1.0,1.0
+2,Map suppliers producing power electronics for BEVs in the Southeast.,"- **Tier 1 Suppliers**: These are major companies that produce high-value components directly used by automakers. For power electronics in BEVs, these would include companies like ABB, Siemens Energy, and Hitachi.
+- **Tier 2 Suppliers**: These provide critical subcomponents to Tier 1 suppliers or directly to automakers for integration into the vehicle’s electrical system. Examples might be Infineon Technologies, STMicroelectronics, and Texas Instruments.
+- **Southeastern Locations**: The Southeast U.S. is home to several automotive supplier hubs due to its proximity to major manufacturing centers like Tennessee (Nissan), Alabama (Ford), and Georgia (Stellantis). Key locations for power electronics suppliers might include Atlanta, Nashville, and Birmingham.
+- **Illustrative Examples**:
+  - ABB in Raleigh, North Carolina
+  - Infineon Technologies in Austin, Texas
+  - STMicroelectronics in Dallas, Texas
+- **Partnerships**: Suppliers often partner with local universities or research institutions for innovation. For example, Siemens Energy might collaborate with Georgia Tech on advanced power electronics development.
+- **Regional Clusters**: The Southeastern U.S. has a growing cluster of automotive suppliers and technology firms focusing on electric vehicle components, supported by state incentives and infrastructure investments.","- **GSC Steel Stamping LLC** produces deep groove ball bearings and DC-to-DC converters relevant to EVs; it is categorized as a Tier 2/3 supplier with Hyundai, Kia, and Rivian as primary OEMs [DOC:structured-row::GNEM updated excel.xlsx::Data::70].
+- **Yazaki North America** provides automotive supplier division services including ADAS and powertrain electronics relevant to EV supply chain roles; it is categorized under OEM Footprint [DOC:structured-row::GNEM updated excel.xlsx::Data::203].
+- **ZF Gainesville LLC** offers automotive supplier footprint components such as electrification, thermal management, and powertrain parts relevant to the EV supply chain role of power electronics [DOC:structured-row::GNEM updated excel.xlsx::Data::206].
+
+Missing info:
+- Specific product details for each company's power electronics offerings.
+- Exact locations within Georgia or other Southeastern states beyond just ""Georgia.""
+
+Evidence:
+[DOC:structured-row::GNEM updated excel.xlsx::Data::70]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::203]
+[DOC:structured-row::GNEM updated excel.xlsx::Data::206]","- **GSC Steel Stamping LLC** is a Tier 2/3 company involved in manufacturing deep grove ball bearings and DC-to-DC converters, relevant to EV supply chain with primary OEMs including Hyundai, Kia, and Rivian. [DOC:structured-row::GNEM updated excel.xlsx::Data::70]
+- **Yazaki North America** is an OEM Footprint company providing automotive supplier division services related to ADAS, powertrain, and electronics in Georgia. [DOC:structured-row::GNEM updated excel.xlsx::Data::203]
+- **ZF Gainesville LLC** operates as part of the OEM Supply Chain, focusing on EV thermal management and power electronics with a manufacturing facility in Georgia. [DOC:structured-row::GNEM updated excel.xlsx::Data::206]
+
+Evidence:
+[DOC:structured-summary::5df8f4d94ed7], [DOC:structured-row::GNEM updated excel.xlsx::Data::70], [DOC:structured-row::GNEM updated excel.xlsx::Data::203], [DOC:structured-row::GNEM updated excel.xlsx::Data::206]",5,3,False,False,False,4,5,0.75,0.8
+3,Which companies in the region manufacture battery modules versus complete packs?,"- **Tier 1 Companies (Battery Module Manufacturers):** These companies specialize in producing individual battery modules, which are then often assembled into larger battery packs by other manufacturers. Examples include:
+  - Contemporary Amperex Technology (CATL) – known for manufacturing battery modules that can be integrated into various electric vehicle models.
+  - LG Energy Solution – produces a variety of lithium-ion battery modules used in automotive and stationary energy storage applications.
+
+- **Tier 2 Companies (Battery Pack Assemblers):** These companies typically take the individual battery modules from Tier 1 suppliers and integrate them to form complete battery packs. Examples include:
+  - Panasonic Automotive Systems Company – integrates battery modules into full battery packs for electric vehicles.
+  - Samsung SDI – assembles battery packs using modules supplied by their own manufacturing units or other suppliers.
+
+- **Regional Focus:** The specific companies mentioned above operate globally but have significant operations in regions like Asia, Europe, and North America. For a more localized perspective, consider regional players such as:
+  - Kokam (South Korea) – specializes in lithium-ion battery packs for electric vehicles.
+  - A123 Systems (United States) – focuses on advanced battery systems including modules and packs.
+
+- **Illustrative Examples:** Companies like BYD (China), which operates both in manufacturing battery modules and assembling complete battery packs, illustrate the overlap that can exist within a single company.","- Vista Metals Corp. manufactures battery modules and is located in Georgia, Troup County, categorized as OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Master Craft Engineering Inc., Fouts Brothers Fire Equipment, and Kyungshin America Corp. also manufacture battery modules in Georgia, categorized as Tier 1 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- F&P Georgia Manufacturing manufactures complete battery packs and is located in Toccoa, Stephens County, Georgia, categorized as Tier 1/2 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Hollingsworth & Vose Co., Hyundai Motor Group, and IMMI also manufacture complete battery packs in Georgia, categorized as Tier 1/2 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+
+Missing info:
+- Specific details on the manufacturing processes or products of each company.
+
+Evidence: [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]","- Vista Metals Corp. manufactures battery modules and is located in Georgia, Troup County, categorized as OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Kyungshin America Corp., Master Craft Engineering Inc., and Fouts Brothers Fire Equipment also manufacture battery modules in Georgia, categorized as Tier 1 or Tier 1/2 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- F&P Georgia Manufacturing, Hollingsworth & Vose Co., Hyundai Motor Group, and IMMI manufacture complete battery packs in Georgia, categorized as Tier 1/2 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+
+Missing info:
+- Specific details on the manufacturing processes or products of each company.
+
+Evidence:
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]",7,4,False,False,False,1,1,1.0,1.0
+4,Find Southeast-based suppliers capable of producing high-voltage connectors at automotive scale.,"- **Tier 1 Suppliers**: Major companies with extensive production capabilities and established presence in the automotive industry.
+  - Illustrative Examples:
+    - TE Connectivity (global, but has significant operations in the Southeast)
+    - Molex (has facilities that could be relevant)
+
+- **Tier 2 Suppliers**: Smaller companies or divisions of larger corporations specializing in specific components like high-voltage connectors.
+  - Illustrative Examples:
+    - Amphenol Corporation (divisions focusing on automotive electronics)
+    - JAE Electronics (with potential Southeastern manufacturing capabilities)
+
+- **Regional Manufacturing Firms**: Localized suppliers with specialized expertise and smaller-scale operations but capable of scaling up for automotive production.
+  - Illustrative Examples:
+    - Southern Connector Group (hypothetical example, illustrative only)
+    - Southeast Automotive Connectors Inc. (hypothetical example, illustrative only)
+
+- **Research Institutions and Universities**: Collaborations or partnerships with research institutions that focus on advanced manufacturing technologies.
+  - Example: Georgia Institute of Technology’s Manufacturing Institute
+
+- **Government Incentives and Programs**: Utilizing government programs aimed at supporting high-tech manufacturing in the Southeast.
+  - Example: South Carolina Research Authority (SCRA)","- WIKA USA in Georgia is a supplier for high-voltage connectors, categorized under OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Woodbridge Foam Corp. in Georgia is another supplier for high-voltage connectors, also categorized under OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Solvay Specialty Polymers USA LLC located in Springfield, Effingham County is a supplier for high-voltage connectors and falls under Tier 1 category [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+
+Missing info:
+- Specific details about the scale of production or capacity to produce at automotive scale.
+
+Evidence: 
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]","- WIKA USA in Georgia is listed as a supplier for high-voltage connectors, categorized under OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Woodbridge Foam Corp. in Georgia is also noted as an OEM Supply Chain supplier for high-voltage connectors [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- Solvay Specialty Polymers USA LLC located in Springfield, Effingham County is listed under Tier 1 category for high-voltage connectors [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+
+Missing info:
+- Specific details on production scale or capacity of these suppliers.
+
+Evidence:
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]",5,3,False,False,False,1,1,1.0,1.0
+5,Which suppliers manufacture DC fast charging hardware and have existing OEM contracts?,"- ABB Ltd is known for manufacturing DC fast charging stations and has partnerships with various Original Equipment Manufacturers (OEMs).
+- ChargePoint, Inc. provides DC fast charging solutions and collaborates with multiple automakers.
+- Schneider Electric produces EV charging infrastructure and works with several automotive companies.
+- Tier 1 suppliers typically manufacture high-volume components or systems directly for OEMs.
+- Tier 2 suppliers often provide critical subcomponents to the Tier 1 suppliers.
+
+Illustrative examples (may not be GA/AL-specific):
+- Tier 1: ABB Ltd, ChargePoint Inc., Schneider Electric
+- Tier 2: Example companies might include those specializing in power electronics or battery management systems.","- Only one supplier, Morgan Corp. in Lawrenceville, Gwinnett County, manufactures DC fast charging hardware according to the provided context.
+- The category for Morgan Corp. is Tier 1, indicating it has an established relationship with OEMs.
+
+Missing info:
+- Specific OEM contracts held by Morgan Corp.
+
+Evidence: [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]","- Only one supplier manufactures DC fast charging hardware according to the provided data: Morgan Corp. located in Lawrenceville, Gwinnett County with a Category of Tier 1 [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141].
+- The context does not specify whether this supplier has existing OEM contracts or the nature of its relationships beyond categorization details [DOC:c26089b4-fed3-591d-9c8c-84a52003385f].
+
+Missing info:
+- Specific OEM contract information for DC fast charging hardware suppliers.
+
+Evidence: 
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141], [DOC:c26089b4-fed3-591d-9c8c-84a52003385f]",5,3,False,False,False,1,2,1.0,1.0
+6,List Tier 2 suppliers supporting autonomous vehicle sensor systems.,"- **Tier 2 Suppliers for Autonomous Vehicle Sensor Systems**:
+  - **Bosch**: Known for manufacturing a wide range of sensors including radar and lidar, which are crucial for autonomous driving.
+  - **Continental AG**: Provides advanced driver assistance systems (ADAS) that include various sensor technologies such as cameras, radar, and ultrasonic sensors.
+  - **Delphi Technologies**: Offers a variety of sensor solutions including camera-based ADAS and radar systems.
+  - **Veoneer**: Formerly part of Autoliv, Veoneer specializes in advanced safety systems including lidar and radar technology for autonomous vehicles.
+  - **Denso Corporation**: Known for developing various types of sensors used in autonomous driving technologies, such as cameras and radar units.","- **Tier 2/3 Supplier**: Woory Industrial Co., Georgia, Category=OEM Supply Chain [DOC:c26089b4-fed3-591d-9c8c-84a52003385f]
+
+Missing info:
+- Tier 2 suppliers specifically for autonomous vehicle sensor systems (other than Woory Industrial Co.)
+
+Evidence: [DOC:c26089b4-fed3-591d-9c8c-84a52003385f]","- **Tier 2/3 Supplier**: Woory Industrial Co., Category=OEM Supply Chain [DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]
+
+Missing info:
+- No Tier 2 suppliers specifically listed for autonomous vehicle sensor systems.
+
+Evidence:
+[DOC:ed37dbce-427a-5be9-9b16-3cfbd0b66141]",5,3,False,False,False,1,1,1.0,1.0
+7,Which EV components show the highest supplier concentration risk in the Southeast?,"- Battery cells and modules often exhibit high supplier concentration due to limited manufacturing capacity globally, which is also true for the Southeast region of the United States.
+- Electric motors and power electronics may have concentrated supply chains if a few dominant manufacturers control production.
+- Rare earth metals used in EV components are typically sourced from a small number of global suppliers, increasing risk.
+- Lithium-ion battery raw materials (e.g., lithium, cobalt) often come from limited geographical sources, creating concentration risks.
+- Charging infrastructure components might face supply chain risks if major charging network providers dominate the Southeast market.
+
+Illustrative examples:
+- Tier 1: Battery cell manufacturers like Panasonic or LG Energy Solution
+- Tier 2: Rare earth metal suppliers such as Molycorp (USA)","Not found in provided context.
+
+Evidence:
+[DOC:c26089b4-fed3-591d-9c8c-84a52003385f]
+[DOC:ea5b4439-6970-5999-a95d-38114a679328]","Not found in provided context. 
+
+Evidence: [DOC:c26089b4-fed3-591d-9c8c-84a52003385f], [DOC:ea5b4439-6970-5999-a95d-38114a679328]",7,4,False,True,True,2,2,1.0,1.0
+8,Identify supply chain dependencies on international battery material imports.,"- **Raw Material Imports**: Many countries rely heavily on imported raw materials such as lithium, cobalt, and nickel from countries like Chile, Congo, and Indonesia for battery production.
+- **Manufacturing Components**: Battery manufacturing often requires specialized components that may be sourced internationally due to technological or logistical advantages in certain regions.
+- **Technological Dependencies**: Advanced technologies used in battery production might come from leading technology hubs such as South Korea (LG Chem) or Japan (Panasonic), which can influence supply chain dynamics.
+- **Logistical Challenges**: International shipping and logistics play a critical role, with potential disruptions due to geopolitical tensions, natural disasters, or pandemics affecting global trade routes.
+- **Regulatory Compliance**: Adherence to international regulations and standards is crucial for battery manufacturers, impacting sourcing decisions and operational costs.
+- **Tier 1 Suppliers**: Major players like China’s CATL (Contemporary Amperex Technology Ltd) and South Korea’s Samsung SDI are key suppliers in the global battery market.
+- **Tier 2 Suppliers**: Smaller but significant suppliers include companies that specialize in specific materials or components, such as Albemarle Corporation for lithium processing.","Not found in provided context.
+
+Evidence:
+[DOC:38dc319c-d41b-5f0c-a750-af0aab3d5b97]
+[DOC:22a2027a-7f7b-5b5d-8427-ef80cd0951b7]
+[DOC:637873be-0419-507d-893f-fef46bd55fa8]
+[DOC:60ca113f-2caf-56b7-b08e-bf82087eca41]
+[DOC:094b990e-9cbe-5012-a9b8-2a448b70daa4]","- **U.S. Reliance on Chinese Graphite and Battery Materials**: The U.S. has a strong reliance on China for graphite and other critical battery materials, which presents challenges in complying with the Inflation Reduction Act (IRA). [WEB:597e82f8bd168450342ff8133df33a251fc6bada]
+- **China's Export Controls**: China has announced export controls on battery graphite, limiting exports to both Japan and the United States. This action is seen as a way to escalate tensions with these countries. [WEB:597e82f8bd168450342ff8133df33a251fc6bada]
+- **Market Opaqueness**: The market for critical minerals, including those used in battery production, is opaque due to a small number of actors and private deals. This makes it difficult to determine accurate market values for these commodities. [WEB:5eeec5ddf614850158bbb9f6942d13bd993f3006]
+
+**Missing info:** Specific details on other international dependencies beyond graphite and the exact impact of China's export controls on U.S. supply chains.
+
+Evidence: [WEB:597e82f8bd168450342ff8133df33a251fc6bada], [WEB:5eeec5ddf614850158bbb9f6942d13bd993f3006]",5,5,False,True,False,5,2,1.0,1.0
+9,Where are Tier 2 or Tier 3 bottlenecks likely to impact OEM production?,"- **Supply Chain Disruptions:** Tier 2 and Tier 3 suppliers often have less robust supply chains, leading to potential disruptions that can affect the availability of critical components for OEMs.
+- **Quality Control Issues:** Smaller suppliers may lack advanced quality control measures, resulting in defective parts that delay production lines at OEM facilities.
+- **Capacity Constraints:** Limited manufacturing capacity at Tier 2 and Tier 3 vendors can cause bottlenecks when there is unexpected demand or sudden increases in orders from OEMs.
+- **Technological Limitations:** Smaller suppliers might not have the latest technology, leading to slower production times and inefficiencies that impact OEM schedules.
+- **Financial Instability:** Financial difficulties at lower-tier suppliers can lead to delayed deliveries or even bankruptcy, causing significant disruptions for OEMs.
+- **Logistical Challenges:** Tier 2 and Tier 3 companies often face logistical challenges such as transportation delays or storage issues, which can impede the timely delivery of parts to OEM production lines.
+
+Illustrative examples:
+- A small electronics manufacturer (Tier 3) facing a sudden shortage of raw materials due to global supply chain disruptions.
+- A medium-sized supplier (Tier 2) experiencing quality control failures that require extensive rework and delays in part deliveries.","Not found in provided context.
+
+Missing info:
+- Specific details on how Tier 2 or Tier 3 bottlenecks affect OEM production.
+- Information about the geographical concentration and criticality of Tier 2/3 suppliers for OEMs.
+
+Evidence: [DOC:c26089b4-fed3-591d-9c8c-84a52003385f], [DOC:ea5b4439-6970-5999-a95d-38114a679328]","Not found in provided context. 
+
+Evidence: [DOC:c26089b4-fed3-591d-9c8c-84a52003385f], [DOC:ea5b4439-6970-5999-a95d-38114a679328]",7,4,False,True,True,2,2,1.0,1.0

@@ -1,0 +1,5 @@
+label,rows,abstention_rate_pct,avg_citation_match_ratio,avg_unsupported_claim_ratio
+local_before,15,73.33,1.0,0.238
+local_after,15,46.67,1.0,0.105
+hybrid_before,15,53.33,1.0,0.108
+hybrid_after,15,40.0,1.0,0.12
