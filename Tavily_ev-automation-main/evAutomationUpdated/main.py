@@ -1,3 +1,8 @@
+"""Legacy entrypoint for the non-canonical ComparisonRunner workflow.
+
+For thesis/research runs, use eval_runner.py.
+"""
+
 from pathlib import Path
 import sys
 

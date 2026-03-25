@@ -146,6 +146,20 @@ class HybridRetriever:
             self._temp_dir.cleanup()
             self._temp_dir = None
 
+    @property
+    def collection_manifest_path(self) -> Path:
+        return self._collection_manifest_path()
+
+    def collection_manifest_metadata(self) -> dict[str, Any]:
+        return self._read_collection_manifest() or {
+            "collection_name": self.collection_name,
+            "fingerprint": self.collection_fingerprint,
+            "chunk_count": len(self.chunks),
+            "embedding_model": self.settings.embedding_model,
+            "manifest_version": INDEX_MANIFEST_VERSION,
+            "point_id_strategy": "uuid5",
+        }
+
     def retrieve(self, question: str, top_k: int | None = None) -> list[RetrievalResult]:
         query_plan = self._plan_query(question)
         structured_results = self._structured_matches(query_plan)

@@ -1,6 +1,27 @@
 # Tavily EV Automation
 
-Tavily-based collection and GNEM phase-1 filtering for Georgia and Southeast EV battery supply-chain research.
+Tavily-based collection and GNEM phase-1 filtering for Georgia and Southeast EV battery supply-chain research, plus a separate research evaluation pipeline for benchmarking EV questions across `no_rag`, `local_rag`, and `hybrid_rag` conditions.
+
+## What this repo contains
+
+This repository currently has two related but separate workflows:
+
+1. `tavily_ev_automation/`
+   - Tavily search and document crawling
+   - GNEM query generation
+   - GNEM phase-1 filtering and review exports
+2. `evAutomationUpdated/`
+   - Excel-driven EV supply-chain question answering
+   - canonical research runner: `eval_runner.py`
+   - one-model, one-mode evaluation runs
+   - golden-answer scoring plus judge-based evidence metrics
+   - reproducible manifests and workbook exports
+
+Important:
+- The crawler/filtering workflow and the LLM comparison workflow live in the same repository.
+- They are not yet wired into a single end-to-end pipeline that automatically feeds crawler outputs into the comparison app.
+- Use the crawler and GNEM tools when you want to collect and filter source material.
+- Use `evAutomationUpdated/` when you want to benchmark LLM answers against EV workbook data.
 
 ## Repository layout
 ```text
@@ -12,6 +33,13 @@ Tavily-based collection and GNEM phase-1 filtering for Georgia and Southeast EV 
 |   |-- grounding/
 |   `-- queries/
 |-- docs/
+|-- evAutomationUpdated/
+|   |-- README.md
+|   |-- eval_runner.py
+|   |-- main.py
+|   |-- src/ev_llm_compare/
+|   |-- tests/
+|   `-- artifacts/
 |-- examples/
 |-- scripts/
 |-- requirements.txt
@@ -27,6 +55,7 @@ Notes:
 - `data/grounding/GA_Automotive Landscape_All_Companies (1).xlsx` is expected locally but is not committed.
 - Live run artifacts now default into `outputs/`.
 - Sample review workbooks that were already in the repo live under `examples/pipeline_runs/`.
+- The LLM comparison app has its own README and Python package metadata under `evAutomationUpdated/`.
 
 ## Setup
 PowerShell:
@@ -46,6 +75,18 @@ cp .env.example .env
 ```
 
 Set `TAVILY_API_KEY` in `.env` before running Tavily-backed commands.
+
+## Which entrypoint to use
+
+- Crawl EV web sources:
+  - `python -m tavily_ev_automation.tavily_crawler ...`
+- Generate GNEM queries:
+  - `python -m tavily_ev_automation.generate_gnem_queries ...`
+- Run GNEM phase-1 filtering:
+  - `python -m tavily_ev_automation.gnem_pipeline ...`
+- Run LLM comparisons on the EV workbook:
+  - `cd evAutomationUpdated`
+  - `python eval_runner.py ...`
 
 ## Quick start
 Single crawler run:
@@ -164,3 +205,68 @@ Kimi works through the same OpenAI-compatible path. For a Kimi judge run, use Mo
 By default, pipeline stage outputs are written to `outputs/pipeline_runs/<timestamp>/`.
 The pipeline now treats retrieval mode explicitly via `--query-mode {pdf_only,web_only,hybrid}` and defaults to `hybrid`.
 SQLite export is optional; add `--write-sqlite-registry` if you want a local registry DB alongside the Excel/CSV outputs.
+
+## EV LLM comparison app
+
+The `evAutomationUpdated/` directory contains the newer benchmarking code for comparing multiple LLMs on EV supply-chain questions from Excel workbooks. It supports:
+
+- canonical thesis/research runs through `eval_runner.py`
+- model keys `qwen25_14b`, `gemma27b`, and `gemini25_flash`
+- modes `no_rag`, `local_rag`, and `hybrid_rag`
+- offline-only hybrid retrieval from local workbook data plus downloaded Tavily documents
+- golden-answer scoring and judge-based evidence metrics
+- per-run manifests, JSONL records, summary exports, and a hybrid-value comparison workbook
+
+Setup for the comparison app:
+
+```bash
+cd evAutomationUpdated
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
+
+Typical environment variables:
+
+```bash
+export GEMINI_API_KEY=your_key_here
+export OLLAMA_BASE_URL=http://localhost:11434
+export QWEN_MODEL=qwen2.5:14b
+export GEMMA_MODEL=gemma3:27b
+export EVALUATION_JUDGE_PROVIDER=ollama
+export EVALUATION_JUDGE_MODEL=mistral-small3.2:24b
+```
+
+Canonical single-run invocation:
+
+```bash
+cd evAutomationUpdated
+python eval_runner.py \
+  --model qwen25_14b \
+  --mode local_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --data_workbook "data/GNEM updated excel.xlsx" \
+  --golden_answers "artifacts/Golden_answers.xlsx"
+```
+
+Hybrid run with offline Tavily documents only:
+
+```bash
+cd evAutomationUpdated
+python eval_runner.py \
+  --model gemini25_flash \
+  --mode hybrid_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --data_workbook "data/GNEM updated excel.xlsx" \
+  --tavily_dir "data/tavily ready documents" \
+  --golden_answers "artifacts/Golden_answers.xlsx" \
+  --study_id thesis_eval_round1
+```
+
+If you run both `local_rag` and `hybrid_rag` for the same `study_id`, the runner also writes `artifacts/results/<study_id>_hybrid_value.xlsx` so you can inspect whether offline web evidence changed the answers, added `WEB:` citations, or improved support/accuracy metrics.
+
+For more detail on the comparison application, see:
+
+- `evAutomationUpdated/README.md`
+- `evAutomationUpdated/CODEBASE_OVERVIEW.md`

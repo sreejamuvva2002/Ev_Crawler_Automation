@@ -2,11 +2,22 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import sys
+
+
+LEGACY_NOTICE = (
+    "[legacy-cli] main.py and ev_llm_compare.cli use the legacy ComparisonRunner surface. "
+    "For thesis/research runs, use eval_runner.py as the canonical runner."
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Compare multiple LLMs on Excel-based EV supply chain questions."
+        description=(
+            "Legacy multi-run comparison CLI. "
+            "For thesis/research evaluation, use eval_runner.py instead."
+        ),
+        epilog="Canonical research entrypoint: python eval_runner.py --model <model_key> --mode <mode> ...",
     )
     parser.add_argument(
         "--data-workbook",
@@ -97,6 +108,7 @@ def main() -> int:
     from .runner import ComparisonRunner
     from .settings import load_config
 
+    print(LEGACY_NOTICE, file=sys.stderr)
     config = load_config()
     runner = ComparisonRunner(config)
     report_path = runner.run(

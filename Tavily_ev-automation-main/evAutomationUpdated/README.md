@@ -1,29 +1,37 @@
-# EV LLM Comparison Pipeline
+# EV Research Evaluation Pipeline
 
-This repository compares multiple LLMs on Excel-based EV supply-chain questions, with and without RAG, then exports workbooks containing responses, retrieval evidence, reference answers, and evaluation metrics.
+This package contains the canonical research evaluation runner for EV supply-chain question answering experiments. The thesis-grade comparison surface is `eval_runner.py`, which runs exactly one model and one mode per invocation and writes reproducible manifests plus per-question outputs.
 
-The active application code lives in `src/ev_llm_compare/`. For a code-oriented walkthrough of the modules and runtime flow, see `CODEBASE_OVERVIEW.md`.
+The supported model keys are:
 
-## Supported runs
+- `qwen25_14b`
+- `gemma27b`
+- `gemini25_flash`
 
-- Qwen with RAG
-- Qwen without RAG
-- Gemma 3 12B with RAG
-- Gemma 3 12B without RAG
-- Gemini 2.5 Flash with RAG
-- Gemini 2.5 Flash without RAG
+The supported modes are:
+
+- `no_rag`
+- `local_rag`
+- `hybrid_rag`
+
+Methodological guarantees in the canonical runner:
+
+- `no_rag` answers from model knowledge only and does not build or touch retrieval indexes.
+- `local_rag` retrieves only from the local workbook-derived corpus.
+- `hybrid_rag` retrieves only from the local workbook-derived corpus plus already-downloaded offline Tavily documents stored locally.
+- `hybrid_rag` does not call the live Tavily API during evaluation.
+- RAG answers are context-only, citation-constrained, and post-validated for citation presence, citation validity, and evidence support.
+
+`main.py` remains in the repository as a legacy convenience entrypoint, but it is not the canonical thesis/research runner.
 
 ## Repo shape
 
-- `src/ev_llm_compare/`: production code
-- `tests/`: unit tests for loader, retrieval, settings, and exports
-- `artifacts/qdrant/`: local vector index storage
-- `artifacts/results/`: generated comparison workbooks and response exports
-- `GNEM updated excel (1).xlsx`: checked-in source workbook
-- `Sample questions.xlsx`: checked-in workbook with 100 questions
-- `artifacts/Golden_answers.xlsx`: checked-in workbook with 100 golden answers
-- `Grouped_use_cases_for_Sample 100 questions.xlsx`: reference grouping of the 100 sample questions
-- `main.py`: CLI entrypoint
+- `eval_runner.py`: canonical single-model, single-mode evaluation runner
+- `main.py`: legacy multi-run entrypoint, not the primary research surface
+- `src/ev_llm_compare/`: retrieval, prompting, export, and scoring modules
+- `tests/`: unit tests for loading, retrieval, validation, and manifests
+- `artifacts/response_outputs/`: per-run JSONL response records
+- `artifacts/results/`: manifests, answer workbooks, metric workbooks, study summaries, leaderboard CSVs
 
 ## Setup
 
@@ -49,144 +57,150 @@ Environment variables:
 export GEMINI_API_KEY=your_key_here
 export OLLAMA_BASE_URL=http://localhost:11434
 export QWEN_MODEL=qwen2.5:14b
-export GEMMA_MODEL=gemma3:12b
+export GEMMA_MODEL=gemma3:27b
 export EVALUATION_JUDGE_PROVIDER=ollama
 export EVALUATION_JUDGE_MODEL=mistral-small3.2:24b
 export EVALUATION_MAX_RETRIES=2
 ```
 
-Legacy `RAGAS_*` environment variables are still accepted as compatibility aliases, but the evaluation layer is now documented as judge-based metrics because it does not call the `ragas` Python API directly.
+Legacy `RAGAS_*` environment variables are still accepted as compatibility aliases, but the default evaluation layer is documented as judge-based metrics because it does not call the `ragas` Python package directly.
 
-Make sure the local Ollama models are pulled if you are using Ollama-backed runs:
+If you are using Ollama-backed models locally:
 
 ```bash
-ollama pull qwen3:8b
-ollama pull gemma3:12b
+ollama pull qwen2.5:14b
+ollama pull gemma3:27b
 ollama pull mistral-small3.2:24b
 ```
 
 ## Run
 
-Default run:
+No-RAG baseline:
 
 ```bash
-python main.py \
-  --data-workbook "GNEM updated excel (1).xlsx" \
-  --question-workbook "Sample questions.xlsx"
+python eval_runner.py \
+  --model qwen25_14b \
+  --mode no_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --golden_answers "artifacts/Golden_answers.xlsx"
 ```
 
-Example: compare the first 10 questions with a single-sheet report:
+Local-RAG run:
 
 ```bash
-python main.py \
-  --data-workbook "GNEM updated excel (1).xlsx" \
-  --question-workbook "Sample questions.xlsx" \
-  --question-limit 10 \
-  --run-name qwen_rag \
-  --run-name qwen_no_rag \
-  --run-name gemma_rag \
-  --run-name gemma_no_rag \
-  --run-name gemini_rag \
-  --run-name gemini_no_rag \
-  --golden-workbook "artifacts/Golden_answers.xlsx" \
-  --output-dir "artifacts/results/sample_run" \
-  --single-sheet-only \
-  --no-response-exports
+python eval_runner.py \
+  --model gemma27b \
+  --mode local_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --data_workbook "data/GNEM updated excel.xlsx" \
+  --golden_answers "artifacts/Golden_answers.xlsx"
 ```
 
-Example: generate a dedicated single-model workbook with per-question metrics plus `overall_response`, `knowledge_source_data`, and `pretrained_data`:
+Hybrid-RAG run with offline Tavily documents only:
 
 ```bash
-python main.py \
-  --data-workbook "GNEM updated excel (1).xlsx" \
-  --question-workbook "Sample questions.xlsx" \
-  --run-name qwen_rag \
-  --golden-workbook "artifacts/Golden_answers.xlsx" \
-  --output-dir "artifacts/results/qwen_single_model" \
-  --single-model-report
+python eval_runner.py \
+  --model gemini25_flash \
+  --mode hybrid_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --data_workbook "data/GNEM updated excel.xlsx" \
+  --tavily_dir "data/tavily ready documents" \
+  --golden_answers "artifacts/Golden_answers.xlsx" \
+  --study_id thesis_eval_round1
 ```
 
-To skip evaluation while validating model access:
+Optional overrides:
 
 ```bash
-python main.py --skip-evaluation
+python eval_runner.py \
+  --model qwen25_14b \
+  --mode local_rag \
+  --questions "data/GNEM_Golden_Questions.xlsx" \
+  --data_workbook "data/GNEM updated excel.xlsx" \
+  --golden_answers "artifacts/Golden_answers.xlsx" \
+  --top_k_local 6 \
+  --top_k_tavily 4 \
+  --context_budget_tokens 1200 \
+  --seed 7
 ```
 
-`--skip-ragas` is still accepted as a hidden compatibility alias.
+## Golden answers
 
-Optional runtime overrides:
+The canonical runner accepts a workbook or CSV through `--golden_answers` with this schema:
 
-```bash
-export MODEL_MAX_TOKENS=1600
-export MODEL_TEMPERATURE=0.1
+- required: `q_id`, `question`, `golden_answer`
+- optional: `question_type`, `golden_key_facts`, `answer_format`, `notes`
+
+Matching behavior:
+
+- primary key is `q_id`
+- if a golden answer exists for a row, it is treated as the authoritative scoring reference
+- once `--golden_answers` is provided, the runner does not fall back to question-row `expected_answer` values for accuracy-style scoring
+- question-row `expected_answer` values are only used when no external golden-answer file is supplied
+
+## Evaluation semantics
+
+`no_rag` uses a separate prompt that allows model-knowledge answers and does not mention missing context.
+
+`local_rag` and `hybrid_rag` use context-only prompting. If no supported answer exists, the model must output exactly:
+
+```text
+Not found in provided context.
 ```
 
-## Retrieval and chunking
+RAG answer format requirements:
 
-- Every tabular row is expanded into multiple chunk views:
-  - `row_full`
-  - `company_profile`
-  - `identity_theme`
-  - `location_theme`
-  - `supply_chain_theme`
-  - `product_theme`
-- Single-column sheets such as methodology or definitions are indexed as `note_reference` chunks.
-- Retrieval combines:
-  - query planning and metadata-aware routing
-  - sentence-transformer dense search
-  - lexical overlap scoring
-  - reciprocal-rank fusion
-  - optional cross-encoder reranking
-- Exact metadata matches can produce structured summaries before prompt generation.
-- Context selection caps duplicate companies and trims oversized structured outputs.
+- 3 to 7 factual bullets maximum
+- every factual bullet ends with one or more evidence IDs such as `[DOC:<id>]`, `[WEB:<id>]`, `[ANALYTIC:<id>]`, or `[GEO:<id>]`
+- if support is partial, answer only the supported portion and add `Missing info:`
+- post-generation validation checks bullet parsing, citation presence, citation validity against retrieved IDs, and whether cited evidence supports each claim
+
+Metric families:
+
+- golden-answer metrics: normalized exact match, semantic similarity, list/set precision-recall-F1 where applicable, and numeric exact/tolerance matching where applicable
+- judge-based evidence metrics for RAG runs: citation coverage, citation validity, support rate, unsupported claim rate, and abstention correctness
 
 ## Outputs
 
-The default full workbook writes these sheets in `artifacts/results/`:
+Each run writes:
 
-- `all_in_one`
-- `responses`
-- `responses_raw`
-- `retrieval`
-- `references`
-- `metrics_per_question`
-- `metrics_summary`
+- `artifacts/response_outputs/<run_id>.jsonl`
+- `artifacts/results/<run_id>_answers.xlsx`
+- `artifacts/results/<run_id>_metrics.xlsx`
+- `artifacts/results/<run_id>_manifest.json`
+- `artifacts/results/<study_id>_summary.xlsx`
+- `artifacts/results/<study_id>_leaderboard.csv`
+- `artifacts/results/<study_id>_hybrid_value.xlsx`
 
-If you pass `--single-sheet-only`, the output workbook contains only `all_in_one`.
+Per-run manifests and JSONL records capture reproducibility fields such as:
 
-That sheet includes:
+- `run_id`
+- model key and resolved provider/model ID
+- mode
+- prompt text and system prompt
+- temperature, max tokens, and seed when available
+- retrieval top-k settings
+- workbook hash
+- golden-answer file hash
+- offline Tavily manifest hash
+- embedding model
+- collection/index fingerprints
+- git commit hash
+- timestamp
 
-- `Question`
-- `reference_answer`
-- `reference_source`
-- one response column per model
-- six metric columns per model:
-  - `answer_accuracy`
-  - `faithfulness`
-  - `response_groundedness`
-  - `grounded_claim_ratio`
-  - `unsupported_claim_ratio`
-  - `contradicted_claim_ratio`
+Per-question records include question metadata, generated answer, retrieved context IDs, extracted citations, golden answer when available, metric fields, validation flags, and error fields.
 
-Per-run response exports are written to `artifacts/correct_responses/` by default:
+`<study_id>_hybrid_value.xlsx` is the study-level inspection workbook for judging whether offline web evidence added value. It pairs `local_rag` and `hybrid_rag` runs for the same model and shows, per question:
 
-- `all_runs_responses.csv`
-- `all_runs_metrics.xlsx`
-- `all_runs_single_sheet.xlsx`
-- `<run_name>_responses.csv`
-- `<run_name>_responses.md`
+- the local answer and hybrid answer side by side
+- whether the hybrid answer changed
+- whether the hybrid answer used `WEB:` citations
+- metric deltas such as support rate, citation coverage, and golden-answer similarity
+- a `hybrid_value_signal` flag for questions where hybrid both used web evidence and materially changed or improved the answer
 
-When `--single-model-report` is used with exactly one run, an additional workbook is written to the output directory with:
+## Migration notes
 
-- `report`
-- `attribution_units`
-- `metrics_per_question`
-- `metrics_summary`
-
-## Notes
-
-- The pipeline is workbook-driven, so you can point it at updated Excel files without changing code.
-- If `artifacts/Golden_answers.xlsx` exists, it is used automatically for `answer_accuracy`.
-- Any question missing from the golden workbook falls back to generated reference answers.
-- Non-RAG runs only receive `answer_accuracy`; grounding metrics are reserved for RAG runs with retrieved context.
-- The checked-in sample assets are aligned: the source workbook, 100-question workbook, and 100-answer golden workbook are all ready for local comparisons.
+- `eval_runner.py` is now the canonical thesis/research runner.
+- `main.py` is preserved for backward compatibility, but it is no longer the primary comparison surface.
+- Research runs are intentionally single-model and single-mode; study-level summaries are built by aggregating per-run manifests and outputs.
+- Custom grounding and evidence checks are documented as judge-based metrics, not RAGAS, unless the real `ragas` package is integrated later.

@@ -1,7 +1,7 @@
 [project]
 name = "ev-llm-comparison"
 version = "0.1.0"
-description = "Production Excel-first pipeline for LLM comparison with RAG and RAGAS."
+description = "Production Excel-first pipeline for EV QA comparison with RAG and judge-based metrics."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -20,7 +20,6 @@ dependencies = [
     "pypdf>=5.0.0",
     "python-dotenv>=1.0.1",
     "qdrant-client>=1.12.0",
-    "ragas>=0.2.0",
     "sentence-transformers>=3.0.0",
 ]
 

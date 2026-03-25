@@ -1,17 +1,33 @@
 # Codebase Overview
 
-This document is the fastest way to understand the active code path in this repository.
+This document is the fastest way to understand the code paths in this repository.
+
+Important:
+- The canonical thesis/research runner is `eval_runner.py`.
+- `main.py` and `src/ev_llm_compare/cli.py` remain for legacy `ComparisonRunner` workflows and are not the primary experiment surface.
 
 ## Primary purpose
 
-The repo benchmarks multiple LLM runs against an Excel workbook of EV supply-chain companies and questions. It supports:
+The repo benchmarks EV supply-chain question answering against workbook data and offline web evidence. The canonical runner supports:
 
-- model comparisons with and without RAG
-- golden-answer loading with fallback reference generation
+- one model and one mode per invocation
+- modes `no_rag`, `local_rag`, and `hybrid_rag`
+- external golden-answer loading keyed by `q_id`
 - offline evaluation using judge-based metrics
-- workbook and CSV/Markdown exports for downstream review
+- reproducible manifests plus JSONL/XLSX/CSV outputs for downstream review
 
-## Active runtime path
+## Canonical runtime path
+
+1. `eval_runner.py`
+   - resolves the canonical model registry
+   - loads questions and optional golden answers
+   - enforces exactly one model and one mode per run
+   - skips retrieval entirely for `no_rag`
+   - builds local-only or local-plus-offline-Tavily retrieval for RAG modes
+   - validates RAG citations and evidence support
+   - writes JSONL, XLSX, manifest, study summary, leaderboard, and hybrid-value comparison outputs
+
+## Legacy runtime path
 
 1. `main.py`
    - adds `src/` to `sys.path`
@@ -21,14 +37,7 @@ The repo benchmarks multiple LLM runs against an Excel workbook of EV supply-cha
    - loads config
    - creates `ComparisonRunner`
 3. `src/ev_llm_compare/runner.py`
-   - loads workbook rows and note sheets
-   - loads questions
-   - builds chunks
-   - initializes retrieval
-   - runs each configured model on each question
-   - loads or generates references
-   - runs evaluation metrics
-   - exports workbooks and response files
+   - preserves the older multi-run workflow for compatibility and non-canonical experiments
 
 ## Core modules
 
