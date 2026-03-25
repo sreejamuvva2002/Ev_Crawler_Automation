@@ -1,0 +1,51 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+*.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project outputs
+runs/
+
+# Local data files
+data/grounding/GA_Automotive\ Landscape_All_Companies\ \(1\).xlsx
+data/corpus/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache and system
+.cache/
+.antigravity/
+.vscode/settings.json
