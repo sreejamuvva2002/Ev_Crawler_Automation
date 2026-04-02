@@ -1,0 +1,28 @@
+{
+  "company_count": 0,
+  "county_count": 0,
+  "oem_count": 0,
+  "port_count": 7,
+  "facility_type_count": 0,
+  "supply_chain_role_count": 0,
+  "product_term_count": 0,
+  "value_chain_term_count": 15,
+  "company_examples": [],
+  "county_examples": [],
+  "oem_examples": [],
+  "port_examples": [
+    "Port of Savannah",
+    "Savannah port",
+    "Garden City Terminal",
+    "Port of Brunswick",
+    "Brunswick port",
+    "Colonel's Island Terminal",
+    "Colonels Island Terminal"
+  ],
+  "facet_labels": [
+    "who makes what where at what scale",
+    "supplier and tier relationships",
+    "logistics and infrastructure risk",
+    "policy, incentives, and localization"
+  ]
+}

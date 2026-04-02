@@ -26,6 +26,54 @@ NORMALIZE_RE = re.compile(r"[^a-z0-9]+")
 NUMBER_RE = re.compile(r"-?\d[\d,]*(?:\.\d+)?%?")
 REQUIRED_GOLDEN_COLUMNS = {"q_id", "question", "golden_answer"}
 OPTIONAL_GOLDEN_COLUMNS = {"question_type", "golden_key_facts", "answer_format", "notes"}
+GOLDEN_COLUMN_ALIASES = {
+    "q_id": {
+        "q_id",
+        "id",
+        "question id",
+        "question_id",
+        "question no",
+        "question_no",
+        "question number",
+        "question_number",
+        "#",
+    },
+    "question": {
+        "question",
+        "query",
+        "sample query",
+        "prompt",
+    },
+    "golden_answer": {
+        "golden_answer",
+        "golden answer",
+        "answer",
+        "reference_answer",
+        "reference answer",
+        "gold_answer",
+    },
+    "question_type": {
+        "question_type",
+        "question type",
+        "type",
+    },
+    "golden_key_facts": {
+        "golden_key_facts",
+        "golden key facts",
+        "key_facts",
+        "key facts",
+    },
+    "answer_format": {
+        "answer_format",
+        "answer format",
+        "format",
+    },
+    "notes": {
+        "notes",
+        "note",
+        "comments",
+    },
+}
 SUPPORT_JUDGE_SYSTEM_PROMPT = (
     "You are a strict grounding validator for context-only question answering. "
     "Return strict JSON only."
@@ -144,6 +192,14 @@ def normalize_header(value: object) -> str:
     return normalize_cell(value).lower()
 
 
+def canonical_golden_header(value: object) -> str:
+    normalized = normalize_header(value)
+    for canonical_name, aliases in GOLDEN_COLUMN_ALIASES.items():
+        if normalized in aliases:
+            return canonical_name
+    return normalized
+
+
 def _read_tabular_with_header_detection(path: Path, *, sheet_name: str | int | None = None) -> pd.DataFrame:
     suffix = path.suffix.lower()
     if suffix in {".xlsx", ".xls"}:
@@ -166,14 +222,14 @@ def _read_tabular_with_header_detection(path: Path, *, sheet_name: str | int | N
 
 
 def _has_named_columns(columns: Any) -> bool:
-    normalized = {normalize_header(column) for column in columns}
+    normalized = {canonical_golden_header(column) for column in columns}
     return bool(normalized & REQUIRED_GOLDEN_COLUMNS)
 
 
 def _promote_header_row(raw_df: pd.DataFrame) -> pd.DataFrame | None:
     for row_index in range(min(10, len(raw_df))):
         headers = [normalize_cell(value) for value in raw_df.iloc[row_index].tolist()]
-        normalized = {header.lower() for header in headers if header}
+        normalized = {canonical_golden_header(header) for header in headers if header}
         if normalized & REQUIRED_GOLDEN_COLUMNS:
             promoted = raw_df.iloc[row_index + 1 :].copy().reset_index(drop=True)
             promoted.columns = [
@@ -189,7 +245,7 @@ def load_golden_answers(path: str | Path, *, sheet_name: str | None = None) -> d
     df = _read_tabular_with_header_detection(golden_path, sheet_name=sheet_name)
     df = df.copy()
     df.columns = [normalize_cell(column) for column in df.columns]
-    column_lookup = {normalize_header(column): column for column in df.columns}
+    column_lookup = {canonical_golden_header(column): column for column in df.columns}
     missing = REQUIRED_GOLDEN_COLUMNS - set(column_lookup)
     if missing:
         raise ValueError(

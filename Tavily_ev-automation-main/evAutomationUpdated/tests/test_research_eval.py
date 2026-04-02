@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -32,6 +33,24 @@ class ResearchEvalTests(unittest.TestCase):
             self.assertEqual(sorted(records), ["Q1", "Q2"])
             self.assertEqual(records["Q1"].golden_answer, "Answer A")
             self.assertEqual(records["Q2"].answer_format, "numeric")
+
+    def test_load_golden_answers_accepts_common_header_aliases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "golden_alias.xlsx"
+            pd.DataFrame(
+                {
+                    "Question_no": [1, 2],
+                    "Question": ["What is A?", "What is B?"],
+                    "Golden_Answer": ["Answer A", "Answer B"],
+                    "Answer Format": ["list", "numeric"],
+                }
+            ).to_excel(path, index=False)
+
+            records = load_golden_answers(path)
+
+            self.assertEqual(sorted(records), ["1", "2"])
+            self.assertEqual(records["1"].golden_answer, "Answer A")
+            self.assertEqual(records["2"].answer_format, "numeric")
 
     def test_resolve_golden_answer_prefers_qid_even_when_question_text_differs(self) -> None:
         records = {
@@ -158,18 +177,28 @@ class ResearchEvalTests(unittest.TestCase):
                 encoding="utf-8",
             )
             (root / "20260325T170000Z_qwen25_14b_local_rag_manifest.json").write_text(
-                (
-                    '{"study_id":"study_a","model_key":"qwen25_14b","mode":"local_rag",'
-                    '"timestamp":"2026-03-25T17:00:00Z","run_id":"run_local",'
-                    f'"response_jsonl_path":"{local_jsonl}"}'
+                json.dumps(
+                    {
+                        "study_id": "study_a",
+                        "model_key": "qwen25_14b",
+                        "mode": "local_rag",
+                        "timestamp": "2026-03-25T17:00:00Z",
+                        "run_id": "run_local",
+                        "response_jsonl_path": str(local_jsonl),
+                    }
                 ),
                 encoding="utf-8",
             )
             (root / "20260325T171000Z_qwen25_14b_hybrid_rag_manifest.json").write_text(
-                (
-                    '{"study_id":"study_a","model_key":"qwen25_14b","mode":"hybrid_rag",'
-                    '"timestamp":"2026-03-25T17:10:00Z","run_id":"run_hybrid",'
-                    f'"response_jsonl_path":"{hybrid_jsonl}"}'
+                json.dumps(
+                    {
+                        "study_id": "study_a",
+                        "model_key": "qwen25_14b",
+                        "mode": "hybrid_rag",
+                        "timestamp": "2026-03-25T17:10:00Z",
+                        "run_id": "run_hybrid",
+                        "response_jsonl_path": str(hybrid_jsonl),
+                    }
                 ),
                 encoding="utf-8",
             )
